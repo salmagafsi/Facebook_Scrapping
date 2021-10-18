@@ -33,8 +33,8 @@ async def root():
 
 async def read_item():
 	
-	#url = "DeepLearningAI" # Pass the URL of the page
-	url="RadioIFM"
+	url = "DeepLearningAI" # Pass the URL of the page
+	
 	list_data= data.scrape_data(url)  
 	
 	# store the scraped data in JSON file
