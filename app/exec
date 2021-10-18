@@ -1,0 +1,15 @@
+#Installation bibliothèques
+
+pip install fastapi
+pip install hypercorn
+pip install facebook-scraper
+pip install pymongo
+
+
+
+## Execution
+
+hypercorn main:app --reload
+
+
+

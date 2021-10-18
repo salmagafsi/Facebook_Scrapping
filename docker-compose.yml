@@ -1,0 +1,15 @@
+flask:
+  build: Dockerfiles/python-pymongo
+  volumes:
+    - app:/app
+  links:
+    - mongodb
+  ports:
+    - "5000:5000"
+  command: /usr/bin/python3 app/main.py
+mongodb:
+  build: Dockerfiles/mongo
+  volumes:
+    - data:/data
+  ports:
+    - "27017:27017"
