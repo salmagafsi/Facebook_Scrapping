@@ -1,6 +1,6 @@
 FROM cormorack/hypercorn:python3.7-conda4.9.2
 
-WORKDIR /home/user1/newapp
+WORKDIR /home/user/app
 
 COPY requirements.txt ./
 RUN pip3 install --no-cache-dir -r requirements.txt
