@@ -8,7 +8,7 @@ class post_data:
 
     def pydata(self, json_file):
 
-        myclient = MongoClient('localhost:27017')
+        myclient = MongoClient('0.0.0.0:27017')
 
         db = myclient["mydatabase"] # use data base named "mydatabase"
 
@@ -29,7 +29,7 @@ class post_data:
         
     def getdata(self):
 
-        myclient = MongoClient('localhost')
+        myclient = MongoClient('0.0.0.0:27017')
 
         db = myclient["mydatabase"] 
 
@@ -41,8 +41,7 @@ class post_data:
 
     def getdetails(self, URL):
 
-        myclient = MongoClient('localhost')
-
+        myclient = MongoClient('0.0.0.0:27017')
         db = myclient["mydatabase"]
         Collection = db["data"]
         x = Collection.find({'url_page': URL})
