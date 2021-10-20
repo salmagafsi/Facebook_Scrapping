@@ -6,7 +6,7 @@ flask:
     - mongodb
   ports:
     - "5000:5000"
-  command: /usr/bin/python3 app/main.py
+  command: /usr/bin/hypercorn app/main.py
 mongodb:
   build: Dockerfiles/mongo
   volumes:
